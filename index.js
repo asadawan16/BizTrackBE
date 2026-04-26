@@ -19,7 +19,7 @@ const app = express();
 connectDB().then(() => seedUsers()).catch(() => {});
 
 // Middleware
-const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:5173')
+const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:5173' || 'https://biz-track-xi.vercel.app')
   .split(',')
   .map(o => o.trim());
 
